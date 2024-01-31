@@ -14,7 +14,7 @@ app.get('/characters', async (req, res) => {
         const response = await axios.get(mainURL)
         res.json(response.data.results)
     } catch(error) {
-        res.status(404).json({message: 'No response!'})
+        res.status(500).json({message: 'No response!'})
     }
 });
 
